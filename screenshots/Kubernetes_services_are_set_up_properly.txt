@@ -1,0 +1,124 @@
+Name:              kubernetes
+Namespace:         default
+Labels:            component=apiserver
+                   provider=kubernetes
+Annotations:       <none>
+Selector:          <none>
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.100.0.1
+IPs:               10.100.0.1
+Port:              https  443/TCP
+TargetPort:        443/TCP
+Endpoints:         192.168.118.159:443,192.168.75.253:443
+Session Affinity:  None
+Events:            <none>
+
+
+Name:                     publicreverseproxy
+Namespace:                default
+Labels:                   app=reverseproxy
+Annotations:              <none>
+Selector:                 app=reverseproxy
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.100.213.86
+IPs:                      10.100.213.86
+LoadBalancer Ingress:     aa4fccff047004fa1b342d9d5d3d110a-276776891.us-east-1.elb.amazonaws.com
+Port:                     <unset>  8080/TCP
+TargetPort:               8080/TCP
+NodePort:                 <unset>  31921/TCP
+Endpoints:                192.168.35.211:8080,192.168.8.32:8080
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:                     publicudagram-frontend
+Namespace:                default
+Labels:                   app=udagram-frontend
+Annotations:              <none>
+Selector:                 app=udagram-frontend
+Type:                     LoadBalancer
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.100.154.35
+IPs:                      10.100.154.35
+LoadBalancer Ingress:     a8a47d7f71cf54913aa8961704fcc3d6-1545502852.us-east-1.elb.amazonaws.com
+Port:                     <unset>  80/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  31311/TCP
+Endpoints:                192.168.26.89:80,192.168.46.184:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+
+
+Name:              reverseproxy
+Namespace:         default
+Labels:            run=reverseproxy
+Annotations:       <none>
+Selector:          run=reverseproxy
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.100.41.104
+IPs:               10.100.41.104
+Port:              8080  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         <none>
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              udagram-api-feed
+Namespace:         default
+Labels:            run=udagram-api-feed
+Annotations:       <none>
+Selector:          run=udagram-api-feed
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.100.36.234
+IPs:               10.100.36.234
+Port:              8080  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         <none>
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              udagram-api-user
+Namespace:         default
+Labels:            run=udagram-api-user
+Annotations:       <none>
+Selector:          run=udagram-api-user
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.100.223.191
+IPs:               10.100.223.191
+Port:              8080  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         <none>
+Session Affinity:  None
+Events:            <none>
+
+
+Name:              udagram-frontend
+Namespace:         default
+Labels:            run=udagram-frontend
+Annotations:       <none>
+Selector:          run=udagram-frontend
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                10.100.173.46
+IPs:               10.100.173.46
+Port:              8080  8080/TCP
+TargetPort:        8080/TCP
+Endpoints:         <none>
+Session Affinity:  None
+Events:            <none>
